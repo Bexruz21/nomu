@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>NOMU — International Marketing Agency</title>
+  <meta name="description"
+    content="NOMU is a premium international marketing agency delivering bold, strategic solutions for global brands." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+
+<body class="lang-en">
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="./images/logo.png" alt="">
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">
+              <span data-lang="en">About</span>
+              <span data-lang="ru">О нас</span>
+              <span data-lang="uz">Biz haqimizda</span>
+            </a></li>
+          <li><a href="#services" class="nav-link">
+              <span data-lang="en">Services</span>
+              <span data-lang="ru">Услуги</span>
+              <span data-lang="uz">Xizmatlar</span>
+            </a></li>
+          <li><a href="#team" class="nav-link">
+              <span data-lang="en">Team</span>
+              <span data-lang="ru">Команда</span>
+              <span data-lang="uz">Jamoa</span>
+            </a></li>
+          <li><a href="#portfolio" class="nav-link">
+              <span data-lang="en">Portfolio</span>
+              <span data-lang="ru">Портфолио</span>
+              <span data-lang="uz">Portfolio</span>
+            </a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">
+              <span data-lang="en">Contact Us</span>
+              <span data-lang="ru">Связаться</span>
+              <span data-lang="uz">Bog'lanish</span>
+            </a></li>
+          <!-- Mobile lang switcher (shown in menu) -->
+          <div class="lang-switcher" style="margin-top:1rem">
+            <button class="lang-btn active" data-lang-switch="en">EN</button>
+            <button class="lang-btn" data-lang-switch="ru">RU</button>
+            <button class="lang-btn" data-lang-switch="uz">UZ</button>
+          </div>
+        </ul>
+        <!-- Desktop lang switcher -->
+        <div class="lang-switcher" id="desktopLang">
+          <button class="lang-btn active" data-lang-switch="en">EN</button>
+          <button class="lang-btn" data-lang-switch="ru">RU</button>
+          <button class="lang-btn" data-lang-switch="uz">UZ</button>
+        </div>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg">
+      <div class="bg-shape shape-1"></div>
+      <div class="bg-shape shape-2"></div>
+      <div class="bg-shape shape-3"></div>
+      <div class="bg-grid"></div>
+    </div>
+    <div class="hero-geo">
+      <div class="geo-ring geo-ring-1">
+        <div class="geo-dot"></div>
+      </div>
+      <div class="geo-ring geo-ring-2">
+        <div class="geo-dot"></div>
+      </div>
+      <div class="geo-ring geo-ring-3"></div>
+      <div class="geo-square geo-square-1"></div>
+      <div class="geo-square geo-square-2"></div>
+      <div style="position:absolute;inset:0">
+        <div class="geo-spark" style="top:18%;left:7%;--dur:2.8s;--delay:0s"></div>
+        <div class="geo-spark" style="top:72%;left:4%;--dur:3.5s;--delay:.6s"></div>
+        <div class="geo-spark" style="top:38%;left:60%;--dur:2.2s;--delay:1.1s"></div>
+        <div class="geo-spark" style="top:82%;left:75%;--dur:4s;--delay:.3s"></div>
+        <div class="geo-spark" style="top:25%;left:50%;--dur:3s;--delay:1.7s"></div>
+      </div>
+    </div>
+    <canvas id="particleCanvas" style="position:absolute;inset:0;pointer-events:none"></canvas>
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-label">
+          <div class="label-line"></div>
+          <span data-lang="en">Premium Marketing Agency</span>
+          <span data-lang="ru">Премиум Маркетинг Агентство</span>
+          <span data-lang="uz">Premium Marketing Agentlik</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line line-1">
+            <span data-lang="en">We turn</span>
+            <span data-lang="ru">Мы делаем</span>
+            <span data-lang="uz">Sizning</span>
+          </span>
+          <span class="title-line line-1">
+            <span data-lang="en">Your name</span>
+            <span data-lang="ru">Ваше имя</span>
+            <span data-lang="uz">Ismingizni</span>
+          </span>
+          <span class="title-line line-2">
+            <span data-lang="en">Into a brand</span>
+            <span data-lang="ru">Брендом</span>
+            <span data-lang="uz">Brendga</span>
+          </span>
+          <span class="title-line line-3">
+            <span data-lang="en">That Lasts</span>
+            <span data-lang="ru">На Века</span>
+            <span data-lang="uz">Aylantiring</span>
+          </span>
+        </h1>
+        <p class="hero-subtitle">
+          <span data-lang="en">Strategic marketing solutions that transcend borders and redefine industry
+            standards.</span>
+          <span data-lang="ru">Стратегические маркетинговые решения, которые выходят за рамки границ и переопределяют
+            стандарты отрасли.</span>
+          <span data-lang="uz">Chegara va sohaviy standartlarni qayta belgilaydigan strategik marketing
+            yechimlari.</span>
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">
+            <span data-lang="en">View Our Work</span>
+            <span data-lang="ru">Наши Работы</span>
+            <span data-lang="uz">Ishlarimiz</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span data-lang="en">Start a Project</span>
+            <span data-lang="ru">Начать Проект</span>
+            <span data-lang="uz">Loyiha Boshlash</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-logo-side">
+        <div class="hero-logo-ring-wrap">
+          <div class="hero-logo-circle">
+            <div class="geo-dot"></div>
+          </div>
+          <div class="hero-logo-circle-2"></div>
+          <div class="hero-logo-text"><img src="./images/logo.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div id="partner-ticker">
+    <div class="ticker-mask">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="section-bg-text">NOMU</div>
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="NOMU Agency Office"
+              class="about-real-img" />
+            <div class="about-img-deco deco-1"></div>
+            <div class="about-img-deco deco-2"></div>
+            <div class="about-badge">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <strong data-lang="en">Award Winning</strong>
+                <strong data-lang="ru">Лучшее</strong>
+                <strong data-lang="uz">Mukofotli</strong>
+                <span data-lang="en">Agency 2026</span>
+                <span data-lang="ru">Агентство 2026</span>
+                <span data-lang="uz">Agentlik 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-content" data-aos="fade-left" data-aos-delay="200">
+          <div class="section-label"><span class="label-dot"></span>
+            <span data-lang="en">About Us</span>
+            <span data-lang="ru">О нас</span>
+            <span data-lang="uz">Biz haqimizda</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="en">We Are NOMU</span>
+            <span data-lang="ru">Мы — NOMU</span>
+            <span data-lang="uz">Biz — NOMU</span>
+          </h2>
+          <p class="about-text">
+            <span data-lang="en">NOMU International Marketing Agency was founded with a singular vision: to help
+              ambitious brands reach their full potential on the global stage. We combine data-driven strategy with
+              creative excellence to deliver campaigns that captivate audiences and drive measurable results.</span>
+            <span data-lang="ru">NOMU International Marketing Agency была основана с единственной целью: помочь
+              амбициозным брендам раскрыть свой полный потенциал на мировой арене. Мы объединяем стратегию, основанную
+              на данных, с творческим мастерством для достижения измеримых результатов.</span>
+            <span data-lang="uz">NOMU International Marketing Agency yagona maqsad bilan tashkil etilgan: ambizioz
+              brendlarga global miqyosda o'z salohiyatini to'liq ro'yobga chiqarishda yordam berish. Biz ma'lumotlarga
+              asoslangan strategiyani ijodiy mukammallik bilan birlashtirish orqali o'lchanadigan natijalar beradigan
+              kampaniyalar ishlab chiqaramiz.</span>
+          </p>
+          <div class="about-pillars">
+            <div class="pillar"><i class="fa-solid fa-chart-line"></i>
+              <div>
+                <strong data-lang="en">Data-Driven</strong>
+                <strong data-lang="ru">На основе данных</strong>
+                <strong data-lang="uz">Ma'lumotlarga asoslangan</strong>
+                <br>
+                <span data-lang="en">Every decision backed by insights</span>
+                <span data-lang="ru">Каждое решение основано на аналитике</span>
+                <span data-lang="uz">Har bir qaror tahlilga asoslanadi</span>
+              </div>
+            </div>
+            <div class="pillar"><i class="fa-solid fa-globe"></i>
+              <div>
+                <strong data-lang="en">Global Reach</strong>
+                <strong data-lang="ru">Глобальный охват</strong>
+                <strong data-lang="uz">Global qamrov</strong>
+                <br>
+                <span data-lang="en">Operating across 12+ markets</span>
+                <span data-lang="ru">Работаем на 12+ рынках</span>
+                <span data-lang="uz">12+ bozorda faoliyat yuritamiz</span>
+              </div>
+            </div>
+            <div class="pillar"><i class="fa-solid fa-gem"></i>
+              <div>
+                <strong data-lang="en">Premium Quality</strong>
+                <strong data-lang="ru">Премиум качество</strong>
+                <strong data-lang="uz">Premium sifat</strong>
+                <br>
+                <span data-lang="en">Uncompromising standard of work</span>
+                <span data-lang="ru">Безкомпромиссный стандарт работы</span>
+                <span data-lang="uz">Murosasiz ish standarti</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>
+          <span data-lang="en">What We Do</span>
+          <span data-lang="ru">Что мы делаем</span>
+          <span data-lang="uz">Biz nima qilamiz</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Full-Spectrum<br>Marketing Excellence</span>
+          <span data-lang="ru">Маркетинг<br>Полного Цикла</span>
+          <span data-lang="uz">To'liq Spektrli<br>Marketing</span>
+        </h2>
+        <p class="section-desc">
+          <span data-lang="en">From concept to conversion, we handle every dimension of your brand's growth.</span>
+          <span data-lang="ru">От концепции до конверсии — мы берёмся за каждый аспект роста вашего бренда.</span>
+          <span data-lang="uz">Kontseptsiyadan konversiyagacha — brendingiz o'sishining har bir qirrasi bilan
+            shug'ullanamiz.</span>
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="service-num">01</div>
+          <h3><span data-lang="en">Classic Marketing</span><span data-lang="ru">Классический Маркетинг</span><span
+              data-lang="uz">Klassik Marketing</span></h3>
+          <p><span data-lang="en">Marketing Strategy, CustDev, PR, SMM, and Performance Marketing — the full toolkit for
+              brand growth.</span><span data-lang="ru">Маркетинговая стратегия, CustDev, PR, SMM и Performance Marketing
+              — полный инструментарий роста бренда.</span><span data-lang="uz">Marketing strategiyasi, CustDev, PR, SMM
+              va Performance Marketing — brendni o'stirishning to'liq vositalari.</span></p>
+          <div class="service-hover-line"></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <div class="service-num">02</div>
+          <h3><span data-lang="en">AI Marketing</span><span data-lang="ru">ИИ Маркетинг</span><span data-lang="uz">AI
+              Marketing</span></h3>
+          <p><span data-lang="en">Lead Generation, AI Content Creation, AI Sales Agent, and AI HR — intelligent
+              automation that scales your business.</span><span data-lang="ru">Генерация лидов, создание контента с
+              помощью ИИ, AI Sales Agent и AI HR — автоматизация, которая масштабирует бизнес.</span><span
+              data-lang="uz">Lead Generation, AI Content, AI Sales Agent va AI HR — biznesingizni kengaytiradigan
+              intellektual avtomatizatsiya.</span></p>
+          <div class="service-hover-line"></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <div class="service-num">03</div>
+          <h3><span data-lang="en">Branding</span><span data-lang="ru">Брендинг</span><span
+              data-lang="uz">Brending</span></h3>
+          <p><span data-lang="en">Naming, Logo design, and Packaging design — building identities that resonate,
+              differentiate, and endure.</span><span data-lang="ru">Нейминг, дизайн логотипа и упаковки — создание
+              идентичности, которая выделяет и сохраняется в памяти.</span><span data-lang="uz">Naming, Logo dizayn va
+              qadoqlash dizayni — rezonans beradigan, farqlantiruvchi va uzoq davom etadigan identifikatsiya
+              qurishak.</span></p>
+          <div class="service-hover-line"></div>
+        </div>
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="service-num">04</div>
+          <h3><span data-lang="en">IT Solutions</span><span data-lang="ru">IT Решения</span><span data-lang="uz">IT
+              Yechimlar</span></h3>
+          <p><span data-lang="en">Website, Mobile App, AI App, and Telegram Bot development — digital products built for
+              performance and scale.</span><span data-lang="ru">Разработка сайтов, мобильных приложений, AI-приложений и
+              Telegram-ботов — цифровые продукты для высокой производительности.</span><span data-lang="uz">Veb-sayt,
+              mobil ilova, AI ilova va Telegram Bot ishlab chiqish — unumdorlik va masshtab uchun yaratilgan raqamli
+              mahsulotlar.</span></p>
+          <div class="service-hover-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section team-section">
+    <div class="section-bg-text">TEAM</div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>
+          <span data-lang="en">Our Team</span>
+          <span data-lang="ru">Наша Команда</span>
+          <span data-lang="uz">Bizning Jamoa</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">The Minds Behind The Magic</span>
+          <span data-lang="ru">Люди За Магией</span>
+          <span data-lang="uz">Sehrning Ortidagi Odamlar</span>
+        </h2>
+        <p class="section-desc">
+          <span data-lang="en">A diverse collective of strategists, creatives, and technologists united by one
+            goal.</span>
+          <span data-lang="ru">Разнообразный коллектив стратегов, креаторов и технологов, объединённых одной
+            целью.</span>
+          <span data-lang="uz">Bir maqsad bilan birlashtirtilgan strateglar, ijodkorlar va texnologlar jamoa.</span>
+        </p>
+      </div>
+    </div>
+    <div class="team-carousel-outer">
+      <div class="team-carousel-track" id="teamTrack">
+        <!-- Team members with real Unsplash photos -->
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="./images/team/team-1.png" alt="CEO" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Sunnat O'tkirov</div>
+            <span class="team-role">Targeting Specialist</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="./images/team/team-2.jpg" alt="CSO" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Suxrob Gafurovich</div>
+            <span class="team-role">Team Leader</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="./images/team/team-3.jpg" alt="Creative Director" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Rahmatov Farrux</div>
+            <span class="team-role">Videographer</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="images/team/team-4.jpg" alt="Head of Digital" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Alina V.</div>
+            <span class="team-role">Designer</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="images/team/team-5.jpg" alt="Performance Lead" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Behruz Muminov</div>
+            <span class="team-role">CEO</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=530&fit=crop&crop=faces&q=80"
+              alt="Brand Strategist" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Elena P.</div>
+            <span class="team-role">Brand Strategist</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=530&fit=crop&crop=faces&q=80"
+              alt="Content Director" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">James L.</div>
+            <span class="team-role">Content Director</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=530&fit=crop&crop=faces&q=80"
+              alt="Influencer Manager" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Natalie S.</div>
+            <span class="team-role">Influencer Manager</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=530&fit=crop&crop=faces&q=80"
+              alt="Data Analyst" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Tom H.</div>
+            <span class="team-role">Data Analyst</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">
+            <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=530&fit=crop&crop=faces&q=80"
+              alt="Growth Manager" />
+            <div class="team-social"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a><a href="#"><i
+                  class="fa-brands fa-instagram"></i></a></div>
+          </div>
+          <div class="team-info">
+            <div class="team-name">Zara N.</div>
+            <span class="team-role">Growth Manager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NICHES -->
+  <section id="niches" class="section niches-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>
+          <span data-lang="en">Industries</span>
+          <span data-lang="ru">Отрасли</span>
+          <span data-lang="uz">Sohalar</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Industries We Transform</span>
+          <span data-lang="ru">Отрасли, которые мы трансформируем</span>
+          <span data-lang="uz">Biz O'zgartiradigan Sohalar</span>
+        </h2>
+      </div>
+      <div class="niches-grid">
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="niche-icon"><i class="fa-solid fa-building"></i></div>
+          <h3><span data-lang="en">Real Estate</span><span data-lang="ru">Недвижимость</span><span
+              data-lang="uz">Ko'chmas mulk</span></h3>
+          <p><span data-lang="en">Property launches, developer marketing, and investor acquisition.</span><span
+              data-lang="ru">Запуск объектов, маркетинг застройщика и привлечение инвесторов.</span><span
+              data-lang="uz">Mulk ishga tushirish, ishlab chiquvchi marketing va investor jalb qilish.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="niche-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3><span data-lang="en">Education</span><span data-lang="ru">Образование</span><span
+              data-lang="uz">Ta'lim</span></h3>
+          <p><span data-lang="en">Student recruitment, brand building for educational institutions.</span><span
+              data-lang="ru">Набор студентов, построение бренда образовательных учреждений.</span><span
+              data-lang="uz">Talabalar jalb qilish, ta'lim muassasalari uchun brend qurish.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="niche-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+          <h3><span data-lang="en">Food Industry</span><span data-lang="ru">Пищевая промышленность</span><span
+              data-lang="uz">Oziq-ovqat sanoati</span></h3>
+          <p><span data-lang="en">Brand strategy for food production and FMCG brands.</span><span
+              data-lang="ru">Бренд-стратегия для продовольственного производства и FMCG брендов.</span><span
+              data-lang="uz">Oziq-ovqat ishlab chiqarish va FMCG brendlari uchun brend strategiyasi.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="niche-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3><span data-lang="en">Cafes & Restaurants</span><span data-lang="ru">Кафе и Рестораны</span><span
+              data-lang="uz">Kafe va Restoranlar</span></h3>
+          <p><span data-lang="en">Experience-driven marketing for F&B establishments.</span><span
+              data-lang="ru">Маркетинг, ориентированный на опыт, для заведений общепита.</span><span
+              data-lang="uz">Tajribaga yo'naltirilgan marketing F&B muassasalari uchun.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="320">
+          <div class="niche-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3><span data-lang="en">Consulting</span><span data-lang="ru">Консалтинг</span><span
+              data-lang="uz">Konsalting</span></h3>
+          <p><span data-lang="en">Authority-building campaigns for consulting firms.</span><span data-lang="ru">Кампании
+              по укреплению авторитета консалтинговых компаний.</span><span data-lang="uz">Konsalting firmalari uchun
+              vakolat qurishning kampaniyalari.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="niche-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3><span data-lang="en">Manufacturing</span><span data-lang="ru">Производство</span><span
+              data-lang="uz">Ishlab chiqarish</span></h3>
+          <p><span data-lang="en">B2B marketing for manufacturing companies.</span><span data-lang="ru">B2B-маркетинг
+              для производственных предприятий.</span><span data-lang="uz">Ishlab chiqarish kompaniyalari uchun B2B
+              marketing.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="480">
+          <div class="niche-icon"><i class="fa-solid fa-film"></i></div>
+          <h3><span data-lang="en">Entertainment</span><span data-lang="ru">Развлечения</span><span
+              data-lang="uz">Ko'ngil ochar</span></h3>
+          <p><span data-lang="en">Audience growth and content marketing for entertainment brands.</span><span
+              data-lang="ru">Рост аудитории и контент-маркетинг для развлекательных брендов.</span><span
+              data-lang="uz">Ko'ngil ochar brendlar uchun auditoriya o'sishi va kontent marketing.</span></p>
+        </div>
+        <div class="niche-item" data-aos="fade-up" data-aos-delay="560">
+          <div class="niche-icon"><i class="fa-solid fa-plane"></i></div>
+          <h3><span data-lang="en">Tourism</span><span data-lang="ru">Туризм</span><span data-lang="uz">Turizm</span>
+          </h3>
+          <p><span data-lang="en">Destination marketing for tourism operators and hotels.</span><span
+              data-lang="ru">Дестинационный маркетинг для туроператоров и гостиниц.</span><span data-lang="uz">Turizm
+              operatorlari va mehmonxonalar uchun destinatsion marketing.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="section portfolio-section">
+    <div class="section-bg-text">WORK</div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>
+          <span data-lang="en">Portfolio</span>
+          <span data-lang="ru">Портфолио</span>
+          <span data-lang="uz">Portfolio</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Selected Case Studies</span>
+          <span data-lang="ru">Избранные Кейсы</span>
+          <span data-lang="uz">Tanlangan Amaliyotlar</span>
+        </h2>
+      </div>
+      <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">
+          <span data-lang="en">All</span><span data-lang="ru">Все</span><span data-lang="uz">Barchasi</span>
+        </button>
+        <button class="filter-btn" data-filter="brand">
+          <span data-lang="en">Branding</span><span data-lang="ru">Брендинг</span><span data-lang="uz">Brending</span>
+        </button>
+        <button class="filter-btn" data-filter="digital">
+          <span data-lang="en">Digital</span><span data-lang="ru">Диджитал</span><span data-lang="uz">Digital</span>
+        </button>
+        <button class="filter-btn" data-filter="campaign">
+          <span data-lang="en">Campaign</span><span data-lang="ru">Кампания</span><span data-lang="uz">Kampaniya</span>
+        </button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="0">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Branding Project" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-category"><span data-lang="en">Branding</span><span
+                    data-lang="ru">Брендинг</span><span data-lang="uz">Brending</span></span>
+                <h3><span data-lang="en">Luxe Identity Redesign</span><span data-lang="ru">Редизайн люкс
+                    идентичности</span><span data-lang="uz">Luxe identifikatsiya qayta dizayni</span></h3>
+                <p>Nexova Group</p>
+              </div>
+              <a href="#" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="digital" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Digital Campaign" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-category"><span data-lang="en">Digital</span><span
+                    data-lang="ru">Диджитал</span><span data-lang="uz">Digital</span></span>
+                <h3><span data-lang="en">Performance Dashboard</span><span data-lang="ru">Панель
+                    эффективности</span><span data-lang="uz">Samaradorlik paneli</span></h3>
+                <p>TechCorp UZ</p>
+              </div>
+              <a href="#" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item portfolio-item--wide" data-category="campaign" data-aos="fade-up"
+          data-aos-delay="200">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80" alt="Featured Campaign" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-category"><span data-lang="en">Campaign</span><span
+                    data-lang="ru">Кампания</span><span data-lang="uz">Kampaniya</span></span>
+                <h3><span data-lang="en">Global Launch Campaign</span><span data-lang="ru">Глобальная кампания
+                    запуска</span><span data-lang="uz">Global ishga tushirish kampaniyasi</span></h3>
+                <p>Atlas Real Estate</p>
+              </div>
+              <a href="#" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="brand" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?w=800&q=80" alt="Brand Strategy" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-category"><span data-lang="en">Branding</span><span
+                    data-lang="ru">Брендинг</span><span data-lang="uz">Brending</span></span>
+                <h3><span data-lang="en">Restaurant Brand System</span><span data-lang="ru">Система бренда
+                    ресторана</span><span data-lang="uz">Restoran brend tizimi</span></h3>
+                <p>Silk Road Dine</p>
+              </div>
+              <a href="#" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="digital" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80" alt="Social Media" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <span class="portfolio-category"><span data-lang="en">Digital</span><span
+                    data-lang="ru">Диджитал</span><span data-lang="uz">Digital</span></span>
+                <h3><span data-lang="en">Social Media Growth</span><span data-lang="ru">Рост социальных
+                    сетей</span><span data-lang="uz">Ijtimoiy tarmoq o'sishi</span></h3>
+                <p>EduPrime Academy</p>
+              </div>
+              <a href="#" class="portfolio-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners" class="section partners-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>
+          <span data-lang="en">Partners</span>
+          <span data-lang="ru">Партнёры</span>
+          <span data-lang="uz">Hamkorlar</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Trusted By Industry Leaders</span>
+          <span data-lang="ru">Нам Доверяют Лидеры Рынка</span>
+          <span data-lang="uz">Soha Liderlari Bizga Ishonadi</span>
+        </h2>
+      </div>
+      <div class="partners-track-wrap" data-aos="fade-up" data-aos-delay="200">
+        <div class="partners-track" id="partnersTrack">
+          <!-- Partner logos with real company-like photos -->
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=320&h=160&fit=crop&q=80"
+              alt="Partner 1" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=320&h=160&fit=crop&q=80"
+              alt="Partner 2" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=320&h=160&fit=crop&q=80"
+              alt="Partner 3" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=320&h=160&fit=crop&q=80"
+              alt="Partner 4" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1507537297725-24a1a7022f3f?w=320&h=160&fit=crop&q=80"
+              alt="Partner 5" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=320&h=160&fit=crop&q=80"
+              alt="Partner 6" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=320&h=160&fit=crop&q=80"
+              alt="Partner 7" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=320&h=160&fit=crop&q=80"
+              alt="Partner 8" /></div>
+          <!-- Duplicated for infinite scroll -->
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=320&h=160&fit=crop&q=80"
+              alt="Partner 1" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=320&h=160&fit=crop&q=80"
+              alt="Partner 2" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=320&h=160&fit=crop&q=80"
+              alt="Partner 3" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=320&h=160&fit=crop&q=80"
+              alt="Partner 4" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1507537297725-24a1a7022f3f?w=320&h=160&fit=crop&q=80"
+              alt="Partner 5" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=320&h=160&fit=crop&q=80"
+              alt="Partner 6" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=320&h=160&fit=crop&q=80"
+              alt="Partner 7" /></div>
+          <div class="partner-logo"><img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=320&h=160&fit=crop&q=80"
+              alt="Partner 8" /></div>
+        </div>
+      </div>
+      <div class="partner-quote" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-quote-left"></i>
+        <blockquote>
+          <span data-lang="en">"NOMU transformed our brand presence across three continents. The results exceeded every
+            benchmark we set."</span>
+          <span data-lang="ru">«NOMU трансформировал наше присутствие бренда на трёх континентах. Результаты превзошли
+            все наши ожидания.»</span>
+          <span data-lang="uz">«NOMU bizning brend mavjudligimizni uch qit'ada o'zgartirdi. Natijalar biz belgilagan har
+            bir ko'rsatkichdan oshib ketdi.»</span>
+        </blockquote>
+        <cite>— CEO, Global Partner Brand</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section faq-section">
+    <div class="section-bg-text">FAQ</div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-label"><span class="label-dot"></span>FAQ</div>
+        <h2 class="section-title">
+          <span data-lang="en">Frequently Asked Questions</span>
+          <span data-lang="ru">Часто задаваемые вопросы</span>
+          <span data-lang="uz">Ko'p so'raladigan savollar</span>
+        </h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">What types of businesses do you work with?</span>
+              <span data-lang="ru">С какими видами бизнеса вы работаете?</span>
+              <span data-lang="uz">Qanday biznes turlari bilan ishlaysiz?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">We work with businesses of all sizes — from ambitious startups to established
+                enterprises across B2B, B2C, and D2C models.</span>
+              <span data-lang="ru">Мы работаем с предприятиями любого масштаба — от амбициозных стартапов до крупных
+                корпораций по моделям B2B, B2C и D2C.</span>
+              <span data-lang="uz">Biz har qanday o'lchamdagi korxonalar bilan — ambizioz startaplardan tortib yirik
+                korporatsiyalargacha B2B, B2C va D2C modellarida ishlaymiz.</span>
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">How long does a typical project take?</span>
+              <span data-lang="ru">Сколько времени занимает типичный проект?</span>
+              <span data-lang="uz">Odatiy loyiha qancha vaqt oladi?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">Brand identity: 4-8 weeks. Full integrated marketing campaign: 3-6 months. We provide
+                a detailed timeline during discovery.</span>
+              <span data-lang="ru">Фирменный стиль: 4-8 недель. Комплексная маркетинговая кампания: 3-6 месяцев. Мы
+                предоставляем подробный план на этапе открытия.</span>
+              <span data-lang="uz">Brend identifikatsiyasi: 4-8 hafta. To'liq integratsiyalangan marketing kampaniyasi:
+                3-6 oy. Batafsil jadval kashfiyot bosqichida taqdim etiladi.</span>
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">Do you work with international clients remotely?</span>
+              <span data-lang="ru">Работаете ли вы с международными клиентами удалённо?</span>
+              <span data-lang="uz">Xalqaro mijozlar bilan masofaviy ishlaysizmi?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">Absolutely. We have extensive experience managing international projects across
+                multiple time zones with structured communication processes.</span>
+              <span data-lang="ru">Конечно. У нас большой опыт управления международными проектами в разных часовых
+                поясах со структурированными процессами коммуникации.</span>
+              <span data-lang="uz">Albatta. Biz turli vaqt mintaqalarida xalqaro loyihalarni boshqarishda katta
+                tajribaga egamiz.</span>
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">What is your pricing structure?</span>
+              <span data-lang="ru">Какова ваша структура ценообразования?</span>
+              <span data-lang="uz">Narxlash tuzilmangiz qanday?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">We offer flexible engagement models: project-based, monthly retainer, and
+                performance-based structures. No hidden fees — full transparency.</span>
+              <span data-lang="ru">Мы предлагаем гибкие модели сотрудничества: проектную, ежемесячный ретейнер и оплату
+                за результат. Без скрытых комиссий — полная прозрачность.</span>
+              <span data-lang="uz">Biz moslashuvchan hamkorlik modellarini taklif qilamiz: loyihaga asoslangan, oylik
+                reteynr va natijaga asoslangan. Yashirin komissiyalarsiz — to'liq shaffoflik.</span>
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">What makes NOMU different?</span>
+              <span data-lang="ru">Чем NOMU отличается от других?</span>
+              <span data-lang="uz">NOMU boshqalardan nimasi bilan farq qiladi?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">Senior-level talent on every account, a genuinely international perspective, and an
+                obsession with measurable outcomes. We think like your business partner.</span>
+              <span data-lang="ru">Специалисты высшего уровня на каждом аккаунте, подлинно международная перспектива и
+                одержимость измеримыми результатами. Мы думаем как ваш бизнес-партнёр.</span>
+              <span data-lang="uz">Har bir hisobda yuqori darajali mutaxassislar, haqiqiy xalqaro nuqtai nazar va
+                o'lchanadigan natijalarga qat'iy e'tibor. Biz sizning biznes hamkoringiz kabi o'ylaymiz.</span>
+            </p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>
+              <span data-lang="en">How do we get started?</span>
+              <span data-lang="ru">Как начать сотрудничество?</span>
+              <span data-lang="uz">Qanday boshlash mumkin?</span>
+            </span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>
+              <span data-lang="en">Fill out the contact form or reach us via phone or Telegram. We'll schedule a free
+                30-minute discovery call and send a tailored proposal.</span>
+              <span data-lang="ru">Заполните контактную форму или свяжитесь с нами по телефону или Telegram. Мы назначим
+                бесплатный 30-минутный звонок и отправим персонализированное предложение.</span>
+              <span data-lang="uz">Aloqa formasini to'ldiring yoki telefon yoki Telegram orqali bog'laning. Biz bepul 30
+                daqiqalik qo'ng'iroq rejalashtiri va moslashtirilgan taklif jo'natamiz.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="section-label"><span class="label-dot"></span>
+            <span data-lang="en">Contact Us</span>
+            <span data-lang="ru">Свяжитесь с нами</span>
+            <span data-lang="uz">Biz bilan bog'laning</span>
+          </div>
+          <h2 class="section-title">
+            <span data-lang="en">Let's Build Something Great</span>
+            <span data-lang="ru">Давайте создадим что-то великое</span>
+            <span data-lang="uz">Keling, biron buyuk narsa yarataylik</span>
+          </h2>
+          <p class="contact-desc">
+            <span data-lang="en">Ready to elevate your brand? Fill out the form and we'll get back to you within 24
+              hours.</span>
+            <span data-lang="ru">Готовы вывести ваш бренд на новый уровень? Заполните форму, и мы ответим в течение 24
+              часов.</span>
+            <span data-lang="uz">Brendingizni yangi darajaga ko'tarishga tayyormisiz? Formani to'ldiring, 24 soat ichida
+              javob beramiz.</span>
+          </p>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/nomu_agency" target="_blank" class="social-link"><i
+                class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nomuz/" target="_blank" class="social-link"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://t.me/nomuagency" target="_blank" class="social-link"><i
+                class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.facebook.com/share/1DLNbojKV6/" target="_blank" class="social-link"><i
+                class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="200">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span data-lang="en">Full Name</span>
+                  <span data-lang="ru">Имя и фамилия</span>
+                  <span data-lang="uz">To'liq ism</span>
+                </label>
+                <input type="text" id="formName" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label>
+                  <span data-lang="en">Email Address</span>
+                  <span data-lang="ru">Электронная почта</span>
+                  <span data-lang="uz">Elektron pochta</span>
+                </label>
+                <input type="email" id="formEmail" name="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span data-lang="en">Phone / Telegram</span>
+                  <span data-lang="ru">Телефон / Telegram</span>
+                  <span data-lang="uz">Telefon / Telegram</span>
+                </label>
+                <input type="text" id="formPhone" name="phone" placeholder="+998 XX XXX XXXX" />
+              </div>
+              <div class="form-group">
+                <label>
+                  <span data-lang="en">Service Interest</span>
+                  <span data-lang="ru">Интересующая услуга</span>
+                  <span data-lang="uz">Qiziqtiruvchi xizmat</span>
+                </label>
+                <select id="formService" name="service">
+                  <option value="" disabled selected>
+                    <span data-lang="en">Select a service</span>
+                  </option>
+                  <option>Classic Marketing</option>
+                  <option>AI Marketing</option>
+                  <option>Branding</option>
+                  <option>IT Solutions</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group form-group--full">
+              <label>
+                <span data-lang="en">Message</span>
+                <span data-lang="ru">Сообщение</span>
+                <span data-lang="uz">Xabar</span>
+              </label>
+              <textarea id="formMessage" name="message" rows="5" placeholder="Tell us about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="submitText">
+                <span data-lang="en">Send Message</span>
+                <span data-lang="ru">Отправить</span>
+                <span data-lang="uz">Yuborish</span>
+              </span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-text">NOMU</span>
+              <span class="logo-sub">International</span>
+            </div>
+            <p>
+              <span data-lang="en">A premium international marketing agency building brands that transcend borders and
+                stand the test of time.</span>
+              <span data-lang="ru">Премиум международное маркетинговое агентство, строящее бренды, выходящие за границы
+                и выдерживающие испытание временем.</span>
+              <span data-lang="uz">Chegara va vaqt sinovini beradigan brendlar quradigan premium xalqaro marketing
+                agentligi.</span>
+            </p>
+            <div class="contact-socials mt-2">
+              <a href="https://www.instagram.com/nomu_agency" target="_blank" class="social-link"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/nomuz/" target="_blank" class="social-link"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://t.me/nomuagency" target="_blank" class="social-link"><i
+                  class="fa-brands fa-telegram"></i></a>
+              <a href="https://www.facebook.com/share/1DLNbojKV6/" target="_blank" class="social-link"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-links-group">
+            <h4><span data-lang="en">Navigation</span><span data-lang="ru">Навигация</span><span
+                data-lang="uz">Navigatsiya</span></h4>
+            <ul>
+              <li><a href="#about"><span data-lang="en">About Us</span><span data-lang="ru">О нас</span><span
+                    data-lang="uz">Biz haqimizda</span></a></li>
+              <li><a href="#services"><span data-lang="en">Services</span><span data-lang="ru">Услуги</span><span
+                    data-lang="uz">Xizmatlar</span></a></li>
+              <li><a href="#team"><span data-lang="en">Team</span><span data-lang="ru">Команда</span><span
+                    data-lang="uz">Jamoa</span></a></li>
+              <li><a href="#portfolio"><span data-lang="en">Portfolio</span><span data-lang="ru">Портфолио</span><span
+                    data-lang="uz">Portfolio</span></a></li>
+              <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="ru">Контакты</span><span
+                    data-lang="uz">Aloqa</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4><span data-lang="en">Services</span><span data-lang="ru">Услуги</span><span
+                data-lang="uz">Xizmatlar</span></h4>
+            <ul>
+              <li><a href="#services"><span data-lang="en">Classic Marketing</span><span data-lang="ru">Классический
+                    маркетинг</span><span data-lang="uz">Klassik marketing</span></a></li>
+              <li><a href="#services"><span data-lang="en">AI Marketing</span><span data-lang="ru">ИИ
+                    маркетинг</span><span data-lang="uz">AI marketing</span></a></li>
+              <li><a href="#services"><span data-lang="en">Branding</span><span data-lang="ru">Брендинг</span><span
+                    data-lang="uz">Brending</span></a></li>
+              <li><a href="#services"><span data-lang="en">IT Solutions</span><span data-lang="ru">IT
+                    решения</span><span data-lang="uz">IT yechimlar</span></a></li>
+            </ul>
+          </div>
+          <div class="footer-links-group">
+            <h4><span data-lang="en">Get In Touch</span><span data-lang="ru">Контакты</span><span
+                data-lang="uz">Bog'lanish</span></h4>
+            <ul>
+              <li><a href="tel:+998200056575">+998 20 005 6575</a></li>
+              <li><a href="tel:+998987759944">+998 98 775 9944</a></li>
+              <li><a href="https://t.me/nomuagency" target="_blank">t.me/nomuagency</a></li>
+              <li><a href="#contact"><span data-lang="en">Request Proposal</span><span data-lang="ru">Запрос
+                    предложения</span><span data-lang="uz">Taklif so'rash</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2026 NOMU International Marketing Agency. <span data-lang="en">All rights reserved.</span><span
+            data-lang="ru">Все права защищены.</span><span data-lang="uz">Barcha huquqlar himoyalangan.</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    'use strict';
+
+    const TELEGRAM_CONFIG = { BOT_TOKEN: 'YOUR_BOT_TOKEN_HERE', CHAT_ID: 'YOUR_CHAT_ID_HERE' };
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+    /* ====== LANGUAGE SWITCHER ====== */
+    function initLang() {
+      const body = document.body;
+      const stored = localStorage.getItem('nomu-lang') || 'en';
+      setLang(stored);
+
+      $$('[data-lang-switch]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.dataset.langSwitch;
+          setLang(lang);
+          localStorage.setItem('nomu-lang', lang);
+        });
+      });
+
+      function setLang(lang) {
+        body.classList.remove('lang-en', 'lang-ru', 'lang-uz');
+        body.classList.add('lang-' + lang);
+        $$('[data-lang-switch]').forEach(b => b.classList.toggle('active', b.dataset.langSwitch === lang));
+      }
+    }
+
+    /* ====== PRELOADER ====== */
+    function initPreloader() {
+      const el = $('#preloader'); if (!el) return;
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          el.classList.add('hidden');
+          document.body.style.overflow = '';
+          if (typeof AOS !== 'undefined') AOS.refresh();
+        }, 2000);
+      });
+    }
+
+    /* ====== TICKER ====== */
+    function initTicker() {
+      const track = $('#tickerTrack'); if (!track) return;
+      const brands = [
+        { name: 'GLOBEX', img: './images/clients/brand-1.jpg' },
+        { name: 'NEXOVA', img: './images/clients/brand-2.png' },
+        { name: 'ATELIO', img: './images/clients/brand-3.png' },
+        { name: 'VERTIX', img: './images/clients/brand-4.jpg' },
+        { name: 'LUMORA', img: './images/clients/brand-5.jpg' },
+        { name: 'KORVEX', img: './images/clients/brand-6.jpg' },
+        { name: 'ZENDAL', img: 'https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=200&h=80&fit=crop&q=80' },
+        { name: 'PRANIS', img: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=200&h=80&fit=crop&q=80' },
+        { name: 'ORBICA', img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=200&h=80&fit=crop&q=80' },
+        { name: 'STROVA', img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&h=80&fit=crop&q=80' },
+        { name: 'KENVEX', img: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=200&h=80&fit=crop&q=80' },
+        { name: 'ALDRA', img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&h=80&fit=crop&q=80' },
+      ];
+
+      function makeItem(brand) {
+        const div = document.createElement('div');
+        div.className = 'ticker-logo';
+        div.innerHTML = `<img src="${brand.img}" alt="${brand.name}" loading="lazy" />`;
+        return div;
+      }
+
+      function buildSet() {
+        const f = document.createDocumentFragment();
+        brands.forEach((b, i) => {
+          f.appendChild(makeItem(b));
+          if (i < brands.length - 1) {
+            const s = document.createElement('div');
+            s.className = 'ticker-sep';
+            f.appendChild(s);
+          }
+        });
+        return f;
+      }
+
+      track.appendChild(buildSet());
+      track.appendChild(buildSet());
+
+      let offset = 0, paused = false, halfW = 0;
+      const speed = 0.5;
+
+      function measure() {
+        const items = Array.from(track.children);
+        const half = items.length / 2;
+        let w = 0;
+        for (let i = 0; i < half; i++) {
+          const r = items[i].getBoundingClientRect();
+          w += r.width;
+          if (i < half - 1) w += 24;
+        }
+        halfW = w + 24;
+      }
+
+      track.addEventListener('mouseenter', () => paused = true);
+      track.addEventListener('mouseleave', () => paused = false);
+
+      window.addEventListener('load', () => {
+        measure();
+        (function frame() {
+          if (!paused && halfW > 0) {
+            offset += speed;
+            if (offset >= halfW) offset -= halfW;
+            track.style.transform = `translateX(-${offset}px)`;
+          }
+          requestAnimationFrame(frame);
+        })();
+      });
+
+      let rt;
+      window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(measure, 200); });
+    }
+    /* ====== NAVBAR ====== */
+    function initNavbar() {
+      const navbar = $('#navbar'), burger = $('#navBurger'), navLinks = $('#navLinks'), overlay = $('#navOverlay');
+      if (!navbar) return;
+      const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 50);
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+      function closeMenu() { burger.classList.remove('active'); navLinks.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+      if (burger && navLinks) {
+        burger.addEventListener('click', () => {
+          const open = navLinks.classList.toggle('open');
+          burger.classList.toggle('active');
+          overlay.classList.toggle('open', open);
+          document.body.style.overflow = open ? 'hidden' : '';
+        });
+        $$('.nav-link', navLinks).forEach(l => l.addEventListener('click', closeMenu));
+        overlay.addEventListener('click', closeMenu);
+      }
+      function updateActive() {
+        const sy = window.scrollY + 120;
+        $$('section[id]').forEach(s => { const l = $(`a[href="#${s.id}"]`, navLinks); if (l) l.classList.toggle('active', sy >= s.offsetTop && sy < s.offsetTop + s.offsetHeight); });
+      }
+      window.addEventListener('scroll', updateActive, { passive: true });
+    }
+
+    /* ====== PARTICLES ====== */
+    function initParticles() {
+      const canvas = $('#particleCanvas'); if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let particles = [], W, H;
+      const N = 40;
+      class P {
+        constructor() { this.reset(true) }
+        reset(init = false) { this.x = Math.random() * W; this.y = init ? Math.random() * H : H + 10; this.r = Math.random() * 1.6 + .3; this.vx = (Math.random() - .5) * .25; this.vy = -(Math.random() * .35 + .1); this.alpha = 0; this.maxA = Math.random() * .35 + .05; this.life = 0; this.maxL = Math.random() * 280 + 140; }
+        update() { this.x += this.vx; this.y += this.vy; this.life++; const t = this.life / this.maxL; this.alpha = t < .2 ? (t / .2) * this.maxA : t > .8 ? ((1 - t) / .2) * this.maxA : this.maxA; if (this.life >= this.maxL) this.reset(); }
+        draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = `rgba(0,245,160,${this.alpha})`; ctx.fill(); }
+      }
+      function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+      function init() { resize(); particles = Array.from({ length: N }, () => new P); }
+      function animate() { ctx.clearRect(0, 0, W, H); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animate); }
+      init(); animate();
+      let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(init, 200) });
+    }
+
+    /* ====== TEAM CAROUSEL ====== */
+    function initTeamCarousel() {
+      const track = $('#teamTrack'); if (!track) return;
+      track.innerHTML += track.innerHTML;
+      let offset = 0, paused = false, halfW = 0;
+      const outer = track.parentElement;
+      outer.addEventListener('mouseenter', () => paused = true);
+      outer.addEventListener('mouseleave', () => paused = false);
+      function measure() {
+        const items = Array.from(track.children); const half = items.length / 2; let w = 0;
+        for (let i = 0; i < half; i++) { w += items[i].getBoundingClientRect().width + 19.2; }
+        halfW = w;
+      }
+      setTimeout(measure, 400);
+      window.addEventListener('resize', measure);
+      (function frame() {
+        if (!paused && halfW > 0) { offset += .45; if (offset >= halfW) offset -= halfW; track.style.transform = `translateX(-${offset}px)`; }
+        requestAnimationFrame(frame);
+      })();
+    }
+
+    /* ====== FAQ ====== */
+    function initFAQ() {
+      $$('.faq-item').forEach(item => {
+        const q = $('.faq-question', item); if (!q) return;
+        q.addEventListener('click', () => {
+          const active = item.classList.contains('active');
+          $$('.faq-item').forEach(i => { i.classList.remove('active'); const qe = $('.faq-question', i); if (qe) qe.setAttribute('aria-expanded', 'false'); });
+          if (!active) { item.classList.add('active'); q.setAttribute('aria-expanded', 'true'); }
+        });
+      });
+    }
+
+    /* ====== PORTFOLIO FILTER ====== */
+    function initPortfolioFilter() {
+      const btns = $$('.filter-btn'), items = $$('.portfolio-item'); if (!btns.length) return;
+      btns.forEach(btn => btn.addEventListener('click', () => {
+        const f = btn.dataset.filter;
+        btns.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+        items.forEach(item => item.classList.toggle('hidden', f !== 'all' && item.dataset.category !== f));
+      }));
+    }
+
+    /* ====== BACK TO TOP ====== */
+    function initBackToTop() {
+      const btn = $('#backToTop'); if (!btn) return;
+      window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 500), { passive: true });
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    /* ====== SMOOTH SCROLL ====== */
+    function initSmoothScroll() {
+      $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+        const id = a.getAttribute('href'); if (id === '#') return;
+        const t = $(id); if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); }
+      }));
+    }
+
+    /* ====== CURSOR GLOW (desktop only) ====== */
+    function initCursorGlow() {
+      if (window.matchMedia('(hover:none)').matches) return;
+      const g = document.createElement('div'); g.id = 'cursorGlow';
+      Object.assign(g.style, { position: 'fixed', top: '0', left: '0', width: '280px', height: '280px', borderRadius: '50%', background: 'radial-gradient(circle,rgba(0,245,160,.05) 0%,transparent 70%)', pointerEvents: 'none', zIndex: '9', transform: 'translate(-50%,-50%)', transition: 'none' });
+      document.body.appendChild(g);
+      let mx = 0, my = 0, gx = 0, gy = 0;
+      window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+      const up = () => { gx += (mx - gx) * .08; gy += (my - gy) * .08; g.style.left = gx + 'px'; g.style.top = gy + 'px'; requestAnimationFrame(up); }; up();
+    }
+
+    /* ====== REVEAL ====== */
+    function initReveal() {
+      const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }), { threshold: .15 });
+      $$('.reveal-up').forEach(el => obs.observe(el));
+    }
+
+    /* ====== TILT ====== */
+    function initTilt() {
+      if (window.matchMedia('(hover:none)').matches) return;
+      $$('.service-card,.niche-item').forEach(card => {
+        card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; card.style.transform = `perspective(800px) rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateY(-4px)`; });
+        card.addEventListener('mouseleave', () => card.style.transform = '');
+      });
+    }
+
+    /* ====== CONTACT FORM ====== */
+    function initContactForm() {
+      const form = $('#contactForm'), status = $('#formStatus'), submitBtn = $('#submitBtn'); if (!form) return;
+      function showStatus(type, msg) { status.className = 'form-status ' + type; status.textContent = msg; status.style.display = 'block'; setTimeout(() => status.style.display = 'none', 5000); }
+      function setLoading(on) { const sp = submitBtn.querySelector('i'); if (on) { sp.className = 'fa-solid fa-circle-notch fa-spin'; submitBtn.disabled = true; } else { sp.className = 'fa-solid fa-paper-plane'; submitBtn.disabled = false; } }
+      async function sendTelegram(data) {
+        const text = [`<b>New Inquiry — NOMU</b>`, `<b>Name:</b> ${data.name}`, `<b>Email:</b> ${data.email}`, `<b>Phone:</b> ${data.phone || '—'}`, `<b>Service:</b> ${data.service || '—'}`, `<b>Message:</b>`, data.message].join('\n');
+        const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.BOT_TOKEN}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: TELEGRAM_CONFIG.CHAT_ID, text, parse_mode: 'HTML' }) });
+        if (!res.ok) throw new Error('Send failed');
+      }
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const data = { name: form.formName?.value.trim(), email: form.formEmail?.value.trim(), phone: form.formPhone?.value.trim(), service: form.formService?.value, message: form.formMessage?.value.trim() };
+        if (!data.name || !data.email || !data.message) { showStatus('error', 'Please fill in all required fields.'); return; }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { showStatus('error', 'Please enter a valid email address.'); return; }
+        setLoading(true);
+        try {
+          if (TELEGRAM_CONFIG.BOT_TOKEN === 'YOUR_BOT_TOKEN_HERE') { await new Promise(r => setTimeout(r, 1200)); } else { await sendTelegram(data); }
+          showStatus('success', 'Message sent! We\'ll get back to you within 24 hours.'); form.reset();
+        } catch (err) { showStatus('error', 'Something went wrong. Please try again.'); }
+        finally { setLoading(false); }
+      });
+    }
+
+    /* ====== AOS ====== */
+    function initAOS() {
+      if (typeof AOS === 'undefined') return;
+      AOS.init({ duration: 650, easing: 'cubic-bezier(.4,0,.2,1)', once: true, offset: 50 });
+    }
+
+    /* ====== NAV ACTIVE STYLE ====== */
+    function initNavStyle() {
+      const s = document.createElement('style');
+      s.textContent = '.nav-link.active{color:var(--teal)!important}.nav-link.active::after{width:60%!important}';
+      document.head.appendChild(s);
+    }
+
+    /* ====== INIT ALL ====== */
+    document.addEventListener('DOMContentLoaded', () => {
+      initLang(); initAOS(); initPreloader(); initTicker(); initNavbar(); initParticles();
+      initTeamCarousel(); initFAQ(); initPortfolioFilter(); initBackToTop();
+      initSmoothScroll(); initCursorGlow(); initReveal(); initContactForm(); initTilt(); initNavStyle();
+    });
+
+    let resizeT;
+    window.addEventListener('resize', () => { clearTimeout(resizeT); resizeT = setTimeout(() => { if (typeof AOS !== 'undefined') AOS.refresh(); }, 300); });
+  </script>
+</body>
+
+</html>
