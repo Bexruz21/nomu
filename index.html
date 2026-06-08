@@ -104,12 +104,6 @@
     <canvas id="particleCanvas" style="position:absolute;inset:0;pointer-events:none"></canvas>
     <div class="hero-inner container">
       <div class="hero-content">
-        <div class="hero-label">
-          <div class="label-line"></div>
-          <span data-lang="en">Premium Marketing Agency</span>
-          <span data-lang="ru">Премиум Маркетинг Агентство</span>
-          <span data-lang="uz">Premium Marketing Agentlik</span>
-        </div>
         <h1 class="hero-title">
           <span class="title-line line-1">
             <span data-lang="en">We turn</span>
@@ -129,7 +123,7 @@
           <span class="title-line line-3">
             <span data-lang="en">That Lasts</span>
             <span data-lang="ru">На Века</span>
-            <span data-lang="uz">Aylantiring</span>
+            <span data-lang="uz">Aylantiramiz</span>
           </span>
         </h1>
         <p class="hero-subtitle">
@@ -184,17 +178,7 @@
               class="about-real-img" />
             <div class="about-img-deco deco-1"></div>
             <div class="about-img-deco deco-2"></div>
-            <div class="about-badge">
-              <i class="fa-solid fa-award"></i>
-              <div>
-                <strong data-lang="en">Award Winning</strong>
-                <strong data-lang="ru">Лучшее</strong>
-                <strong data-lang="uz">Mukofotli</strong>
-                <span data-lang="en">Agency 2026</span>
-                <span data-lang="ru">Агентство 2026</span>
-                <span data-lang="uz">Agentlik 2026</span>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="about-content" data-aos="fade-left" data-aos-delay="200">
@@ -938,7 +922,7 @@
                   <span data-lang="ru">Имя и фамилия</span>
                   <span data-lang="uz">To'liq ism</span>
                 </label>
-                <input type="text" id="formName" name="name" placeholder="John Smith" required />
+                <input type="text" id="formName" name="name" placeholder="" required />
               </div>
               <div class="form-group">
                 <label>
@@ -946,7 +930,7 @@
                   <span data-lang="ru">Электронная почта</span>
                   <span data-lang="uz">Elektron pochta</span>
                 </label>
-                <input type="email" id="formEmail" name="email" placeholder="john@company.com" required />
+                <input type="email" id="formEmail" name="email" placeholder="" required />
               </div>
             </div>
             <div class="form-row">
@@ -956,7 +940,7 @@
                   <span data-lang="ru">Телефон / Telegram</span>
                   <span data-lang="uz">Telefon / Telegram</span>
                 </label>
-                <input type="text" id="formPhone" name="phone" placeholder="+998 XX XXX XXXX" />
+                <input type="text" id="formPhone" name="phone" placeholder="" />
               </div>
               <div class="form-group">
                 <label>
@@ -982,8 +966,7 @@
                 <span data-lang="ru">Сообщение</span>
                 <span data-lang="uz">Xabar</span>
               </label>
-              <textarea id="formMessage" name="message" rows="5" placeholder="Tell us about your project..."
-                required></textarea>
+              <textarea id="formMessage" name="message" rows="5" placeholder="" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
               <span id="submitText">
@@ -1007,8 +990,7 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <span class="logo-text">NOMU</span>
-              <span class="logo-sub">International</span>
+              <img src="./images/logo.png" alt="">
             </div>
             <p>
               <span data-lang="en">A premium international marketing agency building brands that transcend borders and
@@ -1065,7 +1047,7 @@
             <ul>
               <li><a href="tel:+998200056575">+998 20 005 6575</a></li>
               <li><a href="tel:+998987759944">+998 98 775 9944</a></li>
-              <li><a href="https://t.me/nomuagency" target="_blank">t.me/nomuagency</a></li>
+              <li><a href="mailto:nomuagencyuz@gmail.com" target="_blank">nomuagencyuz@gmail.com</a></li>
               <li><a href="#contact"><span data-lang="en">Request Proposal</span><span data-lang="ru">Запрос
                     предложения</span><span data-lang="uz">Taklif so'rash</span></a></li>
             </ul>
@@ -1087,7 +1069,7 @@
   <script>
     'use strict';
 
-    const TELEGRAM_CONFIG = { BOT_TOKEN: 'YOUR_BOT_TOKEN_HERE', CHAT_ID: 'YOUR_CHAT_ID_HERE' };
+    const TELEGRAM_CONFIG = { BOT_TOKEN: '8670651227:AAGgBkubY2vP1v5-k7t0WwObVwav631XnPU', CHAT_ID: '-1003986500374' };
     const $ = (s, c = document) => c.querySelector(s);
     const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
@@ -1332,7 +1314,7 @@
       function showStatus(type, msg) { status.className = 'form-status ' + type; status.textContent = msg; status.style.display = 'block'; setTimeout(() => status.style.display = 'none', 5000); }
       function setLoading(on) { const sp = submitBtn.querySelector('i'); if (on) { sp.className = 'fa-solid fa-circle-notch fa-spin'; submitBtn.disabled = true; } else { sp.className = 'fa-solid fa-paper-plane'; submitBtn.disabled = false; } }
       async function sendTelegram(data) {
-        const text = [`<b>New Inquiry — NOMU</b>`, `<b>Name:</b> ${data.name}`, `<b>Email:</b> ${data.email}`, `<b>Phone:</b> ${data.phone || '—'}`, `<b>Service:</b> ${data.service || '—'}`, `<b>Message:</b>`, data.message].join('\n');
+        const text = [`<b>New Lead\n</b>`, `<b>Name:</b> ${data.name}`, `<b>Email:</b> ${data.email}`, `<b>Phone:</b> ${data.phone || '—'}`, `<b>Service:</b> ${data.service || '—'}`, `<b>Message:</b>`, data.message].join('\n');
         const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.BOT_TOKEN}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: TELEGRAM_CONFIG.CHAT_ID, text, parse_mode: 'HTML' }) });
         if (!res.ok) throw new Error('Send failed');
       }
@@ -1343,7 +1325,11 @@
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { showStatus('error', 'Please enter a valid email address.'); return; }
         setLoading(true);
         try {
-          if (TELEGRAM_CONFIG.BOT_TOKEN === 'YOUR_BOT_TOKEN_HERE') { await new Promise(r => setTimeout(r, 1200)); } else { await sendTelegram(data); }
+          if (TELEGRAM_CONFIG.BOT_TOKEN) {
+            await sendTelegram(data);
+          } else {
+            await sendTelegram(data);
+          }
           showStatus('success', 'Message sent! We\'ll get back to you within 24 hours.'); form.reset();
         } catch (err) { showStatus('error', 'Something went wrong. Please try again.'); }
         finally { setLoading(false); }
