@@ -925,13 +925,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative
+        position: relative;
+        align-self: self-start;
+        
     }
 
     .hero-logo-ring-wrap {
         position: relative;
-        width: 340px;
-        height: 340px
+        width: 440px;
+        height: 440px
     }
 
     .hero-logo-text {
@@ -946,7 +948,7 @@
         color: var(--teal);
         text-shadow: 0 0 60px rgba(0, 245, 160, .35), 0 0 120px rgba(0, 245, 160, .15);
         z-index: 2;
-        letter-spacing: .1em
+        letter-spacing: .1em;
     }
 
     .hero-logo-circle {
