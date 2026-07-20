@@ -20,8 +20,18 @@
         --rxl: 20px;
         --shadow-teal: 0 0 40px rgba(0, 245, 160, .12);
         --shadow-card: 0 8px 40px rgba(0, 0, 0, .5);
-        --trans: .35s cubic-bezier(.4, 0, .2, 1);
-        --trans-slow: .65s cubic-bezier(.4, 0, .2, 1);
+        --ease-out: cubic-bezier(.16, 1, .3, 1);
+        --motion-fast: .16s;
+        --motion-base: .24s;
+        --motion-slow: .42s;
+        --trans: var(--motion-base) var(--ease-out);
+        --trans-slow: var(--motion-slow) var(--ease-out);
+
+        /* Carousel speed in pixels per second. Change these values as needed. */
+        --carousel-speed-multiplier: 1;
+        --carousel-ticker-speed: 42;
+        --carousel-team-speed: 38;
+        --carousel-partners-speed: 44;
     }
 
     *,
@@ -162,7 +172,7 @@
         justify-content: center;
         flex-direction: column;
         gap: 2rem;
-        transition: opacity .6s ease, visibility .6s ease
+        transition: opacity var(--motion-slow) var(--ease-out), visibility var(--motion-slow) var(--ease-out)
     }
 
     #preloader.hidden {
@@ -177,7 +187,7 @@
         font-weight: 800;
         color: var(--teal);
         letter-spacing: .3em;
-        animation: pulseGlow 1.5s ease-in-out infinite;
+        animation: pulseGlow 1.2s ease-in-out infinite;
     }
 
     .preloader-bar {
@@ -191,7 +201,7 @@
     .preloader-fill {
         height: 100%;
         background: linear-gradient(90deg, var(--teal-dk), var(--teal-lt));
-        animation: fillBar 2s ease forwards
+        animation: fillBar 1.1s var(--ease-out) forwards
     }
 
     @keyframes fillBar {
@@ -236,14 +246,13 @@
         align-items: center;
         gap: 20px;
         white-space: nowrap;
+        width: max-content;
         will-change: transform;
-        background-color: rgba(255, 255, 255, 0);
-
     }
 
     .ticker-logo {
         flex-shrink: 0;
-        width: 120px;
+        width: 160px;
         height: 100px;
         display: flex;
         align-items: center;
@@ -262,8 +271,6 @@
 
     .ticker-logo img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
         transition: var(--trans);
         filter: grayscale(100%) brightness(.5)
     }
@@ -1230,7 +1237,7 @@
         width: 0;
         height: 2px;
         background: linear-gradient(90deg, var(--teal-dk), var(--teal-lt));
-        transition: var(--trans-slow)
+        transition: var(--trans)
     }
 
     .service-card:hover .service-hover-line {
@@ -1283,7 +1290,7 @@
         height: 100%;
         object-fit: cover;
         object-position: top center;
-        transition: transform .6s ease
+        transition: transform var(--motion-slow) var(--ease-out)
     }
 
     .team-card:hover .team-photo img {
@@ -1388,7 +1395,7 @@
         width: 0;
         height: 2px;
         background: linear-gradient(90deg, transparent, var(--teal), transparent);
-        transition: var(--trans-slow)
+        transition: var(--trans)
     }
 
     .niche-item:hover {
@@ -1505,7 +1512,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform .6s ease
+        transition: transform var(--motion-slow) var(--ease-out)
     }
 
     .portfolio-item:hover .portfolio-img img {
@@ -1602,28 +1609,14 @@
     .partners-track {
         display: flex;
         gap: 1.5rem;
-        animation: scrollTrack 30s linear infinite;
-        width: max-content
-    }
-
-    .partners-track:hover {
-        animation-play-state: paused
-    }
-
-    @keyframes scrollTrack {
-        from {
-            transform: translateX(0)
-        }
-
-        to {
-            transform: translateX(-50%)
-        }
+        width: max-content;
+        will-change: transform
     }
 
     .partner-logo {
         flex-shrink: 0;
         width: 160px;
-        height: 120px;
+        height: 100px;
         border-radius: var(--r);
         overflow: hidden;
         border: 1px solid var(--border);
@@ -1638,6 +1631,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
         transition: var(--trans);
     }
 
@@ -1745,20 +1739,29 @@
     }
 
     .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .4s cubic-bezier(.4, 0, .2, 1)
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        transition: grid-template-rows var(--motion-base) var(--ease-out), opacity var(--motion-fast) ease-out
     }
 
     .faq-item.active .faq-answer {
-        max-height: 300px
+        grid-template-rows: 1fr;
+        opacity: 1
     }
 
     .faq-answer p {
-        padding: 0 1.8rem 1.3rem;
+        min-height: 0;
+        overflow: hidden;
+        padding: 0 1.8rem;
         font-size: .88rem;
         color: var(--text2);
-        line-height: 1.85
+        line-height: 1.85;
+        transition: padding-bottom var(--motion-base) var(--ease-out)
+    }
+
+    .faq-item.active .faq-answer p {
+        padding-bottom: 1.3rem
     }
 
     /* ========== CONTACT ========== */
@@ -2129,11 +2132,16 @@
         }
 
         .team-carousel-outer {
-            margin: 0 -20px
+            margin: 0 -16px
         }
 
         .team-carousel-track {
-            padding: 0 20px
+            gap: .85rem;
+            padding: 0 16px 1rem
+        }
+
+        .team-card {
+            width: min(72vw, 220px)
         }
 
         .services-grid {
@@ -2165,7 +2173,7 @@
             justify-content: center;
             align-items: center;
             gap: .4rem;
-            transition: right .4s cubic-bezier(.4, 0, .2, 1);
+            transition: right var(--motion-base) var(--ease-out);
             z-index: 999;
             padding: 2rem 1rem;
             overflow-y: auto;
@@ -2285,12 +2293,18 @@
         }
 
         .partners-track-wrap {
-            margin-bottom: 2rem
+            margin: 0 -16px 2rem;
+            mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent)
+        }
+
+        .partners-track {
+            gap: .8rem
         }
 
         .partner-logo {
-            width: 130px;
-            height: 65px
+            width: 120px;
+            height: 75px
         }
 
         .partner-quote {
@@ -2303,8 +2317,12 @@
         }
 
         .faq-answer p {
-            padding: 0 1.2rem 1.1rem;
+            padding: 0 1.2rem;
             font-size: .84rem
+        }
+
+        .faq-item.active .faq-answer p {
+            padding-bottom: 1.1rem
         }
 
         .contact-grid {
@@ -2340,8 +2358,16 @@
 
 
         .ticker-logo {
-            height: 80px;
-            width: 100px
+            width: 120px;
+            height: 75px;
+        }
+
+        .ticker-track {
+            gap: 12px
+        }
+
+        .ticker-sep {
+            height: 18px
         }
 
     }
@@ -2371,6 +2397,16 @@
             display: none
         }
 
+        .team-card {
+            width: min(76vw, 210px)
+        }
+
+        .ticker-logo,
+        .partner-logo {
+            width: 104px;
+            height: 65px
+        }
+
         /* Show lang switcher in mobile menu instead */
         .nav-links .lang-switcher {
             display: flex
@@ -2381,7 +2417,7 @@
     .reveal-up {
         opacity: 0;
         transform: translateY(40px);
-        transition: opacity .7s ease, transform .7s ease
+        transition: opacity var(--motion-slow) var(--ease-out), transform var(--motion-slow) var(--ease-out)
     }
 
     .reveal-up.visible {
@@ -2442,12 +2478,35 @@
 
     .ticker-logo img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 10px;
         filter: grayscale(0%) brightness(1.2);
         opacity: 0.55;
-        transition: filter 0.3s ease, opacity 0.3s ease;
+        transition: filter var(--motion-base) var(--ease-out), opacity var(--motion-base) var(--ease-out);
         display: block;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: .01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: .01ms !important;
+            transition-delay: 0s !important
+        }
+
+        .ticker-track,
+        .team-carousel-track,
+        .partners-track {
+            transform: none !important;
+            will-change: auto
+        }
     }
 
     .ticker-logo:hover img {
