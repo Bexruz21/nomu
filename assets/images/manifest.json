@@ -1,0 +1,97 @@
+{
+  "logo.png": {
+    "src": "/assets/images/logo.webp",
+    "width": 1133,
+    "height": 228
+  },
+  "flag.png": {
+    "src": "/assets/images/flag.webp",
+    "width": 800,
+    "height": 1080
+  },
+  "clients/brand-1.png": {
+    "src": "/assets/images/clients/brand-1.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-2.png": {
+    "src": "/assets/images/clients/brand-2.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-3.png": {
+    "src": "/assets/images/clients/brand-3.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-4.png": {
+    "src": "/assets/images/clients/brand-4.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-5.png": {
+    "src": "/assets/images/clients/brand-5.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-6.png": {
+    "src": "/assets/images/clients/brand-6.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-7.png": {
+    "src": "/assets/images/clients/brand-7.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-8.png": {
+    "src": "/assets/images/clients/brand-8.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-9.png": {
+    "src": "/assets/images/clients/brand-9.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-10.png": {
+    "src": "/assets/images/clients/brand-10.webp",
+    "width": 400,
+    "height": 250
+  },
+  "clients/brand-11.png": {
+    "src": "/assets/images/clients/brand-11.webp",
+    "width": 400,
+    "height": 250
+  },
+  "team/team-1.png": {
+    "src": "/assets/images/team/team-1.webp",
+    "width": 640,
+    "height": 640
+  },
+  "team/team-2.jpg": {
+    "src": "/assets/images/team/team-2.webp",
+    "width": 640,
+    "height": 640
+  },
+  "team/team-3.png": {
+    "src": "/assets/images/team/team-3.webp",
+    "width": 640,
+    "height": 640
+  },
+  "team/team-4.jpg": {
+    "src": "/assets/images/team/team-4.webp",
+    "width": 640,
+    "height": 640
+  },
+  "team/team-5.jpg": {
+    "src": "/assets/images/team/team-5.webp",
+    "width": 640,
+    "height": 1137
+  },
+  "team/team-6.PNG": {
+    "src": "/assets/images/team/team-6.webp",
+    "width": 640,
+    "height": 744
+  }
+}
